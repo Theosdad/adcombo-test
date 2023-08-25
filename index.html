@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AdCombo Test</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href=" https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css " rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="fonts/ubuntu-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ubuntu-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ubuntu-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <button class="header__button" id="burger-button"></button>
+      <a class="header__logo logo" href="#!">
+        <img src="./img/logo.svg" width="114" height="55" alt="Logo of company.">
+      </a>
+
+      <ul class="header__list site-list list-reset">
+        <li class="site-list__item">
+          <a class="site-list__link" href="#!">People nearby</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#!">Search</a>
+        </li>
+        <li class="site-list__item site-list__item--special">
+          <a class="site-list__link site-list__link--special" href="#!">
+            <span>Premium</span>
+            <svg aria-hidden="true" focusable="false" width="18" height="15">
+              <use href="img/icons/stack.svg#icon-diamond"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="page__container container">
+      <div class="sidebar">
+        <div class="sidebar__user user">
+          <div class="user__image">
+            <img src="./img/user-avatar.png" srcset="./img/user-avatar@2x.png" width="49" height="49"
+              alt="Picture of You.">
+          </div>
+          <div class="user__description">
+            <p>Test2412</p>
+            <a href="#!">Get premium</a>
+          </div>
+        </div>
+        <ul class="sidebar__list user-list list-reset">
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="22" height="22">
+                <use href="img/icons/stack.svg#icon-user"></use>
+              </svg>
+              <span>Profile</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="22" height="18">
+                <use href="img/icons/stack.svg#icon-camera"></use>
+              </svg>
+              <span>My photos</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
+                <use href="img/icons/stack.svg#icon-read-message"></use>
+              </svg>
+              <span>Messages</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="22" height="20">
+                <use href="img/icons/stack.svg#icon-heart"></use>
+              </svg>
+              <span>Favorites</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="23" height="16">
+                <use href="img/icons/stack.svg#icon-eye"></use>
+              </svg>
+              <span>Guests</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="22" height="22">
+                <use href="img/icons/stack.svg#icon-gear"></use>
+              </svg>
+              <span>Settings</span>
+            </a>
+          </li>
+
+          <li class="user-list__item">
+            <a class="user-list__link" href="#!">
+              <svg aria-hidden="true" focusable="false" width="20" height="20">
+                <use href="img/icons/stack.svg#icon-logout"></use>
+              </svg>
+              <span>Log out</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="parallax">
+        <div class="parallax__left">
+          <img src="./img/parallax-left.png" srcset="./img/parallax-left@2x.png 2x" width="640" height="640" alt="">
+        </div>
+        <div class="parallax__right">
+          <img src="./img/parallax-right.png" srcset="./img/parallax-right@2x.png 2x" width="607" height="803" alt="">
+        </div>
+      </div>
+
+      <section class="catalog">
+        <h1>Закончились кредиты?</h1>
+        <div class="catalog__offer">
+          <span>Скидка 40%</span>
+          <p>Предложение действует в течении:</p>
+          <div id="timer">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">30</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+          </div>
+        </div>
+        <form action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
+          <div class="catalog__slider swiper">
+            <ul class="catalog__list offers-list list-reset swiper-wrapper">
+              <li class="offers-list__item offers-list__item--special swiper-slide" data-slogan="One time offer!">
+                <div class="offers-list__price">
+                  <p>
+                    <b>50</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$5</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+              <li class="offers-list__item swiper-slide">
+                <div class="offers-list__price">
+                  <p>
+                    <b>150</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$15</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+              <li class="offers-list__item swiper-slide">
+                <div class="offers-list__price">
+                  <p>
+                    <b>300</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$27</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+              <li class="offers-list__item swiper-slide">
+                <div class="offers-list__price">
+                  <p>
+                    <b>500</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$45</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+              <li class="offers-list__item swiper-slide">
+                <div class="offers-list__price">
+                  <p>
+                    <b>1000</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$90</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+              <li class="offers-list__item swiper-slide">
+                <div class="offers-list__price">
+                  <p>
+                    <b>1000</b>
+                    <svg aria-hidden="true" focusable="false" width="17" height="17">
+                      <use href="img/icons/stack.svg#icon-cr"></use>
+                    </svg>
+                  </p>
+                  <span>/</span>
+                  <span>$90</span>
+                </div>
+                <button type="submit">Buy now</button>
+              </li>
+
+            </ul>
+            <div class="catalog__pagination swiper-pagination"></div>
+          </div>
+          <button type="submit">Try now</button>
+          <div class="catalog__agreement">
+            <input id="agreement" name="agreement" type="checkbox" required>
+            <label for="agreement">By&nbsp;clicking Checkbox you agree and accept our <a href="#!">Privacy Policy</a>,
+              and <a href="#!">Terms of use</a></label>
+          </div>
+        </form>
+      </section>
+
+      <section class="features">
+        <h2 class="visually-hidden">Работать с нами одно удовольствие, а узнать почему - другое.</h2>
+        <ul class="features__list list-reset">
+
+          <li class="features__item">
+            <img src="./img/diamond.svg" width="81" height="67" alt="picture of diamond.">
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-type-message"></use>
+                </svg>
+              </span>
+              <p>Отправлять сообщения</p>
+            </a>
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-eye"></use>
+                </svg>
+              </span>
+              <p>Просматривать скрытые фото</p>
+            </a>
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-gift"></use>
+                </svg>
+              </span>
+              <p>Оплачивать подарки</p>
+            </a>
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-heart"></use>
+                </svg>
+              </span>
+              <p>Пользоваться другими премиум
+                функциями</p>
+            </a>
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-read-message"></use>
+                </svg>
+              </span>
+              <p>Мама, я - программист</p>
+            </a>
+          </li>
+
+          <li class="features__item">
+            <a class="features__link" href="#!">
+              <span>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="img/icons/stack.svg#icon-gear"></use>
+                </svg>
+              </span>
+              <p>Что&nbsp;за&nbsp;бархатная сетка, кефтеме</p>
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+    </div>
+    <embed class="visually-hidden" src="./audio/unenaane.mp3" autostart="true">
+  </main>
+  <script src=" https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js "></script>
+  <script src="./js/script.js" type="module"></script>
+</body>
+
+
+</html>
