@@ -1,0 +1,170 @@
+.catalog {
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 23px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba($cesoir, $alpha: 0.2);
+
+    @media (min-width: $desktop) {
+      text-shadow: 4px 4px 0 rgba($black, $alpha: 0.25);
+      font-size: 40px;
+      transform: translateY(-10px);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__offer {
+    display: none;
+    align-items: center;
+
+    padding: 13px;
+    margin-bottom: 26px;
+    background-color: $mulberry;
+    border-radius: 10px;
+
+    @media (min-width: $desktop) {
+      display: flex;
+    }
+
+    span {
+      color: $sunglow;
+      font-size: 40px;
+      letter-spacing: 1.6px;
+      -webkit-text-stroke: 1px $white;
+      margin-right: 31px;
+    }
+
+    p {
+      color: $white;
+      font-size: 16px;
+      margin: 0;
+      margin-right: 37px;
+    }
+
+    & #timer {
+      background-color: $white;
+      border-radius: 5px;
+      padding: 5px 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    & #timer > span {
+      margin: 0;
+      color: $black;
+      letter-spacing: normal;
+      user-select: none;
+    }
+  }
+
+  button {
+    padding: 17px;
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 16px;
+    font-family: $ubuntu;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $sunglow;
+    color: $black;
+    transition: all 0.5s ease-in;
+
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      color: $sunglow;
+      background-color: $cesoir;
+      opacity: 0.8;
+      transition: all 0.5s ease-in;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    position: static;
+    margin-bottom: 35px;
+
+    & > .swiper-pagination-bullet {
+      background-color: $sunglow;
+    }
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__agreement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input[type="checkbox"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      background-color: $cesoir;
+      border-radius: 5px;
+      flex-shrink: 0;
+
+      position: relative;
+      cursor: pointer;
+
+      &:checked::after {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 11px;
+        border: 2px solid $white;
+        border-left: none;
+        border-top: none;
+        transform: rotate(45deg);
+
+        position: absolute;
+        top: 3px;
+        left: 7px;
+      }
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    a {
+      color: $cesoir;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slider {
+    overflow-x: hidden;
+
+    @media (min-width: $desktop) {
+      overflow: inherit;
+      padding: 0;
+    }
+  }
+}

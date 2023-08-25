@@ -1,0 +1,122 @@
+.offers-list {
+  display: flex;
+  row-gap: 15px;
+  margin-bottom: 12px;
+
+  @media (min-width: $desktop) {
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+
+  &__item {
+    background-color: rgba($cesoir, $alpha: 0.1);
+    border: 1px solid $cesoir;
+    border-radius: 10px;
+
+    padding: 15px 33px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 11px;
+
+    @media (min-width: $desktop) {
+      min-width: 150px;
+      flex: 1;
+      align-items: center;
+      padding: 15px;
+    }
+
+    &--special {
+      background-color: $cesoir;
+      color: $white;
+      position: relative;
+      max-width: calc(100% - 20px);
+      margin-left: 20px;
+
+      @media (min-width: $desktop) {
+        margin: 0;
+        max-width: none;
+      }
+
+      &::before {
+        content: attr(data-slogan);
+        font-size: 14px;
+        padding: 3px 10px;
+        color: $black;
+        background-color: $sunglow;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 2;
+        top: 30%;
+        left: -20px;
+
+        @media (min-width: $desktop) {
+          top: -10%;
+          left: 13px;
+        }
+      }
+    }
+
+    &:nth-child(n+6) {
+      background-color: rgba($coral-tree, $alpha: 0.2);
+      border-color: $coral-tree;
+
+      flex-direction: row;
+      justify-content: center;
+      column-gap: 40px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    span {
+      font-size: 24px;
+
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }
+
+    & > button {
+      display: none;
+
+      padding: 17px;
+      margin: 0;
+      width: 120px;
+      align-self: stretch;
+      font-size: 16px;
+      font-family: $ubuntu;
+      font-weight: 500;
+
+      border: none;
+      border-radius: 5px;
+      background-color: $white;
+      color: rgba($black, $alpha: 0.2);
+
+      transition: all 0.25s ease-in;
+      cursor: url("../../img/cursor-pointer.svg"), auto;
+
+      @media (min-width: $desktop) {
+        display: block;
+      }
+
+      &:hover {
+        background-color: $sunglow;
+        color: $black;
+        transition: all 0.25s ease-in;
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}

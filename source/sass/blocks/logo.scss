@@ -1,0 +1,18 @@
+.logo {
+  display: none;
+  transition: all 0.25s ease-in;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 1px $sunglow);
+    transition: all 0.25s ease-in;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}

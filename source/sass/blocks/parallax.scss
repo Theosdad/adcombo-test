@@ -1,0 +1,25 @@
+.parallax {
+  display: none;
+  max-width: 1920px;
+  margin: 0 auto;
+  justify-content: space-between;
+  z-index: -1;
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+
+  &__right,
+  &__left {
+    position: absolute;
+    transition: transform 0.2s ease-out;
+  }
+
+  &__left {
+    left: 0;
+  }
+
+  &__right {
+    right: 0;
+  }
+}

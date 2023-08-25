@@ -1,0 +1,43 @@
+.user {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba($cesoir, $alpha: 0.2);
+
+  &__image {
+    flex-shrink: 0;
+  }
+
+  &__description {
+    max-width: 170px;
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+
+      border-radius: 5px;
+      background-color: $honey-flower;
+
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $white;
+      transition: all 0.5s ease-in;
+
+      &:hover {
+        background-color: transparent;
+        color: $honey-flower;
+        outline: 1px solid $honey-flower;
+        transition: all 0.5s ease-in;
+      }
+    }
+  }
+}

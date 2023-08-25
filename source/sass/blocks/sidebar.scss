@@ -1,0 +1,23 @@
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: span 10;
+
+  display: none;
+  flex-direction: column;
+
+  padding: 18px;
+
+  border-radius: 10px;
+  border: 2px solid rgba($cesoir, $alpha: 0.2);
+  background: rgba($cesoir, $alpha: 0.2);
+
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+
+  &.active {
+    display: flex;
+    margin-bottom: 20px;
+    animation: appearance 0.5s ease-in-out;
+  }
+}
