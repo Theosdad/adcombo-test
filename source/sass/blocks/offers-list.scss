@@ -10,7 +10,7 @@
 
   &__item {
     background-color: rgba($cesoir, $alpha: 0.1);
-    border: 1px solid $cesoir;
+    border: 2px solid $cesoir;
     border-radius: 10px;
 
     padding: 15px 33px;
@@ -52,7 +52,7 @@
         left: -20px;
 
         @media (min-width: $desktop) {
-          top: -10%;
+          top: -12px;
           left: 13px;
         }
       }
@@ -63,8 +63,12 @@
       border-color: $coral-tree;
 
       flex-direction: row;
-      justify-content: center;
+      justify-content: end;
       column-gap: 40px;
+
+      @media (min-width: $desktop) {
+        justify-content: center;
+      }
     }
 
     p {
@@ -117,5 +121,13 @@
     display: flex;
     align-items: center;
     gap: 2px;
+
+    b {
+      word-break: break-all;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
   }
 }

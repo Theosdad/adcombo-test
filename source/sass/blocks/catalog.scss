@@ -28,6 +28,7 @@
 
     @media (min-width: $desktop) {
       display: flex;
+      gap: 10px;
     }
 
     span {
@@ -35,14 +36,14 @@
       font-size: 40px;
       letter-spacing: 1.6px;
       -webkit-text-stroke: 1px $white;
-      margin-right: 31px;
+      margin-right: auto;
     }
 
     p {
       color: $white;
       font-size: 16px;
       margin: 0;
-      margin-right: 37px;
+      margin-right: auto;
     }
 
     & #timer {
@@ -69,10 +70,10 @@
     width: 100%;
     font-size: 16px;
     font-family: $ubuntu;
-    font-weight: 500;
+    font-weight: 700;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: $sunglow;
     color: $black;
     transition: all 0.5s ease-in;
@@ -144,6 +145,12 @@
 
     label {
       cursor: pointer;
+      font-size: 10px;
+      font-weight: 400;
+
+      @media (min-width: $desktop) {
+        font-size: 13px;
+      }
     }
 
     a {
