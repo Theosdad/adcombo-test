@@ -1,1 +1,1 @@
-export const initSwiper=()=>{if(window.innerWidth<1024){new Swiper(".swiper",{loop:!1,pagination:{el:".swiper-pagination",clickable:"true"}})}};
+let swiperInstance=null;const initSwiper=()=>{const n=window.innerWidth;n<1024&&!swiperInstance?swiperInstance=new Swiper(".swiper",{loop:!1,pagination:{el:".swiper-pagination",clickable:!0}}):n>=1024&&swiperInstance&&(swiperInstance.destroy(),swiperInstance=null)};initSwiper(),window.addEventListener("resize",(()=>{initSwiper()}));
