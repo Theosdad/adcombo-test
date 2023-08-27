@@ -16,7 +16,7 @@
     padding: 15px 33px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: end;
     row-gap: 11px;
 
@@ -25,6 +25,7 @@
       flex: 1;
       align-items: center;
       padding: 15px;
+      flex-direction: row;
     }
 
     &--special {
@@ -36,7 +37,6 @@
 
       @media (min-width: $desktop) {
         margin: 0;
-        max-width: none;
       }
 
       &::before {
@@ -62,12 +62,15 @@
       background-color: rgba($coral-tree, $alpha: 0.2);
       border-color: $coral-tree;
 
-      flex-direction: row;
       justify-content: end;
       column-gap: 40px;
 
       @media (min-width: $desktop) {
         justify-content: center;
+
+        & > div {
+          margin: 0;
+        }
       }
     }
 
@@ -92,7 +95,7 @@
 
       padding: 17px;
       margin: 0;
-      width: 120px;
+      max-width: 185px;
       font-size: 16px;
       font-family: $ubuntu;
       font-weight: 500;
@@ -121,6 +124,10 @@
     display: flex;
     align-items: center;
     gap: 2px;
+
+    @media (min-width: $desktop) {
+      margin: 0 auto;
+    }
 
     b {
       word-break: break-all;
